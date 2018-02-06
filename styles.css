@@ -22,7 +22,7 @@ h1 {
     font-size: 2.75em;
     font-weight: 700;
     letter-spacing: -0.03em;
-    line-height: 1.6;
+    line-height: 1.6em;
     text-indent: -0.06em;
 }
 
@@ -32,6 +32,7 @@ h2 {
     font-size: 1.6em;
     font-weight: 700;
     letter-spacing: -0.01em;
+    line-height: 1.2em;
     color: crimson;
 }
 
@@ -75,6 +76,7 @@ article header p {
 .containerInHeader p {
     font-family: 'Source Serif Pro', 'Times New Roman', serif;
     font-size: 1.6em;
+    line-height: 1.2em;
     letter-spacing: -0.03em;
     margin-bottom: 0.4em;   /* h1 line-height: 1.6; */
     margin-top: -0.4em;
