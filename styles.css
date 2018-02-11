@@ -55,7 +55,8 @@ html {
     font-weight: 400;
     font-size: 18px;        /* old: 16px */ 
     line-height: 1.45;      /* old: 1.4 (22.4px) */
-    color: #333333;  
+    color: #333333; 
+    font-feature-settings: "ss02" 1, "ss03" 1, "onum" 1, "liga" 1;   
 }
 
 /* Headings are usually shorter so they need to have less space between the lines of heading, so that it doesn't look like the lines of text are drifting apart. Recommanded line height: 1 to 1.2 times the size of the text. For example, a heading at 24 pixels */
@@ -67,11 +68,11 @@ h1 {
     letter-spacing: -0.021em;
     /*text-indent: -0.06em;*/
     margin-top: 1rem;
+    font-feature-settings: "smcp" 1;
 }
 
 /* */
 h2 {
-    font-family: 'Source Serif Pro', 'Times New Roman', serif;
     font-weight: 700;
     font-size: 2em;
     letter-spacing: -0.01em;
@@ -100,7 +101,7 @@ article header {
 }
 /* complement article p */
 article header p {
-    margin-bottom: 0em; 
+    margin-bottom: 0em;
 }
 
 .HeaderBackground {
