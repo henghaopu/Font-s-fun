@@ -117,7 +117,7 @@ article header p {
 */
 .mainContent, .containerInHeader {
     padding: 1em;
-    width: 100%;
+    
     max-width: 500px;
     margin: 0 auto;
 }
@@ -132,18 +132,26 @@ article header p {
 }
 
 .footerContainer {
-    display: table;
-    height: 75px;
+    /* display: table; */
+    /* height: 75px; */
+    height: 4.5em;
     margin: 0 auto;
-    width: 400px;
+    /*width: 400px;*/
     
 }
 
+/*
 .footerContent {
     display: table-cell;
     text-align: center;
     Vertical-Align: middle;
     font-size: 0.6em;
+}
+*/
+
+.websiteFooter p {
+    text-align: center;
+    font-size: 0.5em;
 }
 
 .writtenDate {
