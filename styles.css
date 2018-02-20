@@ -14,13 +14,13 @@ h1, h2, h3, h4, h5, h6 {
     line height of p: 18px * 1.45 = 26px
 
     line height scale:
-        h1: 5.075 rem   (0.725 * 7)
-            4.35  rem   (0.725 * 6)
-            3.625 rem   (0.725 * 5)
-        h2: 2.9   rem   (0.725 * 4)
-            2.175 rem   (0.725 * 3)
-        p:  1.45  rem   (0.725 * 2)  (18px <-> 1.45)
-            0.725 rem
+        h1: 5.075rem   (0.725 * 7)
+            4.35rem    (0.725 * 6)
+            3.625rem   (0.725 * 5)
+        h2: 2.9rem     (0.725 * 4)
+            2.175rem   (0.725 * 3)
+        p:  1.45rem    (0.725 * 2)  (18px <-> 1.45)
+            0.725rem
 
     font size scale:
         h1: 3.5 em
@@ -33,6 +33,19 @@ h1, h2, h3, h4, h5, h6 {
 
     rem is always relative to the html font-size
     em is proportionate to its nearest parent that has a font-size
+*/
+
+/*  
+    font size of p: 20px / 22px
+    modular scale: 1.48 / 1.51 / 1.53 / 1.55
+    line height of p: 20px * 1.48 = 29.6px
+    
+    line height scale:
+        5.18rem (0.74 * 7) / 5.285
+        2.96rem (0.74 * 4) / 3.02 / 3.06
+        1.48rem (0.74 * 2) / 1.51
+        0.74rem / 0.755 / 0.765 / 0.775
+        
 */
 
 /* 
@@ -64,17 +77,18 @@ h1 {
     font-family: 'Source Serif Pro', 'Times New Roman', serif;
     font-weight: 700;
     font-size: 3.5em;
-    /*line-height: 4.35rem; = line-height: 1.45; */
+    /* rem: compare to html font-size */
+    line-height: 5.075rem; 
     letter-spacing: -0.021em;
     /*text-indent: -0.06em;*/
-    margin-top: 1rem;
+    margin-top: 1.45rem;
     font-feature-settings: "smcp" 1;
 }
 
 /* */
 h2 {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2em; 
     letter-spacing: -0.01em;
     color: crimson;
 }
@@ -82,22 +96,23 @@ h2 {
 /* An em is equivalent to the width of a letter m. Its an old definition. Its deprecated now and nowadays, the size of M is less than the one traditionally applied. It is normally taken roughly as 16 pixels size. i.e, 1 em = 16 px */
 
 header {
-    margin-bottom: 1em;
+    margin-bottom: 1.45rem;
 }
 
 p.author {
     font-size: 0.75em; 
-    line-height: 1.45rem;       /* retain the line-height */ 
+    /* retain the line-height */ 
+    line-height: 1.45rem;       
     letter-spacing: -0.02em;
     color:dimgray;
 }
 
 article p {
-    margin-bottom: 1em;   
+    margin-bottom: 1.45rem;   
 }
 
 article header {
-    margin-bottom: 1em;
+    margin-bottom: 1.45rem;
 }
 /* complement article p */
 article header p {
@@ -116,7 +131,8 @@ article header p {
     e.g., body text: 20px, line height: 30px (1.5em), line height: 600px 
 */
 .mainContent, .containerInHeader {
-    padding: 1em;
+    /* EXCEPTION: NOT 1.45em because h1 cannot fit in the same line*/
+    padding: 1.45em 1em 1.45em 1em;
     
     max-width: 500px;
     margin: 0 auto;
@@ -164,9 +180,26 @@ article header p {
         font-size: 20px;
         line-height: 1.48;
     }
+    h1 {
+        margin-top: 1.48rem;
+    }
+    p.author {
+        line-height: 1.48rem; 
+    }
+    article header {
+        margin-bottom: 1.48rem;
+    }
+    .containerInHeader p {
+        line-height: 2.96rem;        
+    }
     .mainContent, .containerInHeader {
         max-width: 600px;
+        padding: 1.48em;
+        margin: 0 auto 0 5.075rem;
     }
+    .websiteFooter p {
+        font-size: 0.53em;
+    }  
 }
 
 @media screen and (min-width: 960px) {
@@ -174,7 +207,75 @@ article header p {
         font-size: 22px; 
         line-height: 1.51;
     }
+    h1 {
+        margin-top: 1.51rem;
+    }
+    p.author {
+        line-height: 1.51rem; 
+    }
+    .containerInHeader p {
+        line-height: 3.02rem;        
+    }
+    article header {
+        margin-bottom: 1.51rem;
+    }
     .mainContent, .containerInHeader {
         max-width: 700px;  
+        padding: 1.51em;
+    }
+    .websiteFooter p {
+        font-size: 0.56em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 24px; 
+        line-height: 1.53;
+    }
+    h1 {
+        margin-top: 1.53rem;
+    }
+    p.author {
+        line-height: 1.53rem; 
+    }
+    .containerInHeader p {
+        line-height: 3.06rem;        
+    }
+    article header {
+        margin-bottom: 1.53rem;
+    }
+    .mainContent, .containerInHeader {
+        max-width: 750px; 
+        padding: 1.53em;
+    }
+    .websiteFooter p {
+        font-size: 0.59em;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    html {
+        font-size: 26px; 
+        line-height: 1.55;
+    }
+    h1 {
+        margin-top: 1.55rem;
+    }
+    p.author {
+        line-height: 1.55rem; 
+    }
+    .containerInHeader p {
+        line-height: 3.1rem;        
+    }
+    article header {
+        margin-bottom: 1.55rem;
+    }
+    .mainContent, .containerInHeader {
+        max-width: 800px; 
+        padding: 1.55em;
+    }
+    .websiteFooter p {
+        font-size: 0.62em;
     }
 }
